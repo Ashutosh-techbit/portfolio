@@ -417,7 +417,12 @@ Tools: Figma, Canva, Tailwind CSS, Bootstrap.</p>
                         </div>
                     </div>
                     <div class="contact-form-container">
-                        <form id="contact-form" class="contact-form">
+                        <form action="https://api.web3forms.com/submit" method="POST" id="contact-form" class="contact-form">
+                            
+                            <input type="hidden" name="access_key" value="d91a0e99-0cbb-4f3c-a161-9f78039741d7">
+                             <!-- <input type="hidden" name="redirect" value="https://ashutosh-techbit.github.io/portfolio/"> -->
+
+                            
                             <div class="form-group">
                                 <input type="text" id="name" name="name" placeholder="Your Name" required>
                                 <label for="name">Your Name</label>
