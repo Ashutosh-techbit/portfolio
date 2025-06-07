@@ -186,71 +186,61 @@ document.addEventListener("DOMContentLoaded", () => {
     })
   })
 
-  const contactForm = document.getElementById("contact-form");
-const formStatus = document.getElementById("form-status");
+  // Contact form handling
+  const contactForm = document.getElementById("contact-form")
+  const formStatus = document.getElementById("form-status")
 
-contactForm.addEventListener("submit", async (e) => {
-  e.preventDefault();
+  contactForm.addEventListener("submit", (e) => {
+    e.preventDefault()
 
-  const formData = new FormData(contactForm);
-  const name = formData.get("name");
-  const email = formData.get("email");
-  const subject = formData.get("subject");
-  const message = formData.get("message");
+    // Get form data
+    const formData = new FormData(contactForm)
+    const name = formData.get("name")
+    const email = formData.get("email")
+    const subject = formData.get("subject")
+    const message = formData.get("message")
 
-  // Basic validation
-  if (!name || !email || !subject || !message) {
-    showFormStatus("Please fill in all fields.", "error");
-    return;
-  }
-
-  if (!isValidEmail(email)) {
-    showFormStatus("Please enter a valid email address.", "error");
-    return;
-  }
-
-  const submitBtn = contactForm.querySelector(".submit-btn");
-  const originalText = submitBtn.innerHTML;
-  submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
-  submitBtn.disabled = true;
-
-  try {
-    const response = await fetch("https://api.web3forms.com/submit", {
-      method: "POST",
-      body: formData,
-    });
-
-    const result = await response.json();
-
-    if (response.ok) {
-      showFormStatus("Thank you! Your message has been sent successfully.", "success");
-      contactForm.reset();
-    } else {
-      showFormStatus(result.message || "Something went wrong!", "error");
+    // Basic validation
+    if (!name || !email || !subject || !message) {
+      showFormStatus("Please fill in all fields.", "error")
+      return
     }
-  } catch (error) {
-    showFormStatus("Network error. Please try again later.", "error");
-  } finally {
-    submitBtn.innerHTML = originalText;
-    submitBtn.disabled = false;
+
+    if (!isValidEmail(email)) {
+      showFormStatus("Please enter a valid email address.", "error")
+      return
+    }
+
+    // Simulate form submission
+    const submitBtn = contactForm.querySelector(".submit-btn")
+    const originalText = submitBtn.innerHTML
+
+    submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...'
+    submitBtn.disabled = true
+
+    // Simulate API call
+    setTimeout(() => {
+      showFormStatus("Thank you! Your message has been sent successfully.", "success")
+      contactForm.reset()
+
+      submitBtn.innerHTML = originalText
+      submitBtn.disabled = false
+    }, 2000)
+  })
+
+  function showFormStatus(message, type) {
+    formStatus.textContent = message
+    formStatus.className = `form-status ${type}`
+
+    setTimeout(() => {
+      formStatus.style.display = "none"
+    }, 5000)
   }
-});
 
-function showFormStatus(message, type) {
-  formStatus.textContent = message;
-  formStatus.className = `form-status ${type}`;
-  formStatus.style.display = "block";
-
-  setTimeout(() => {
-    formStatus.style.display = "none";
-  }, 5000);
-}
-
-function isValidEmail(email) {
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  return emailRegex.test(email);
-}
-
+  function isValidEmail(email) {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+    return emailRegex.test(email)
+  }
 
   // Parallax effect for floating shapes
   window.addEventListener("scroll", () => {
