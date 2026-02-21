@@ -10,16 +10,29 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!el) return;
 
         try {
-            const res = await fetch('https://api.github.com/users/Ashutosh-techbit');
-            if (!res.ok) throw new Error('API error');
-            const data = await res.json();
+            // Fetch user data for repo count
+            const userRes = await fetch('https://api.github.com/users/Ashutosh-techbit');
+            if (!userRes.ok) throw new Error('API error');
+            const userData = await userRes.json();
+            const repos = userData.public_repos || 0;
 
-            const repos = data.public_repos || 0;
-            const followers = data.followers || 0;
+            // Fetch contributions from GitHub's contribution graph
+            let contributions = null;
+            try {
+                const contribRes = await fetch('https://github-contributions-api.jogruber.de/v4/Ashutosh-techbit?y=last');
+                if (contribRes.ok) {
+                    const contribData = await contribRes.json();
+                    contributions = contribData.total && contribData.total['lastYear'];
+                }
+            } catch {}
 
-            el.textContent = `${repos} repos · ${followers} followers`;
+            if (contributions) {
+                el.textContent = `${contributions} contributions · ${repos} repos`;
+            } else {
+                el.textContent = `${repos} repos · GitHub`;
+            }
         } catch {
-            el.textContent = '30+ repos · GitHub';
+            el.textContent = '300+ contributions · GitHub';
         }
     }
 
