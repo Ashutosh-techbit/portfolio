@@ -585,10 +585,15 @@ a.bento-value:hover {
 .tech-item:hover .fa-react { color: #61dafb; }
 .tech-item:hover .fa-node-js { color: #339933; }
 .tech-item:hover .fa-java { color: #007396; }
+.tech-item:hover .fa-python { color: #3776ab; }
 .tech-item:hover .fa-git-alt { color: #f05032; }
 .tech-item:hover .fa-github { color: #f5f5f7; }
 .tech-item:hover .fa-figma { color: #f24e1e; }
 .tech-item:hover .fa-bootstrap { color: #7952b3; }
+.tech-item:hover .fa-aws { color: #ff9900; }
+.tech-item:hover .fa-docker { color: #2496ed; }
+.tech-item:hover .fa-wind { color: #06b6d4; }
+.tech-item:hover .fa-wand-magic-sparkles { color: #bf5af2; }
 
 /* === Projects Grid === */
 .projects-grid {
@@ -1014,6 +1019,13 @@ footer {
 .tech-grid [data-animate]:nth-child(14) { transition-delay: 390ms; }
 .tech-grid [data-animate]:nth-child(15) { transition-delay: 420ms; }
 .tech-grid [data-animate]:nth-child(16) { transition-delay: 450ms; }
+.tech-grid [data-animate]:nth-child(17) { transition-delay: 480ms; }
+.tech-grid [data-animate]:nth-child(18) { transition-delay: 510ms; }
+.tech-grid [data-animate]:nth-child(19) { transition-delay: 540ms; }
+.tech-grid [data-animate]:nth-child(20) { transition-delay: 570ms; }
+.tech-grid [data-animate]:nth-child(21) { transition-delay: 600ms; }
+.tech-grid [data-animate]:nth-child(22) { transition-delay: 630ms; }
+.tech-grid [data-animate]:nth-child(23) { transition-delay: 660ms; }
 
 /* === Responsive === */
 @media (max-width: 1024px) {
