@@ -4,6 +4,27 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
+    // ---- Fetch GitHub Stats (Real-time) ----
+    async function fetchGitHubStats() {
+        const el = document.getElementById('github-stats');
+        if (!el) return;
+
+        try {
+            const res = await fetch('https://api.github.com/users/Ashutosh-techbit');
+            if (!res.ok) throw new Error('API error');
+            const data = await res.json();
+
+            const repos = data.public_repos || 0;
+            const followers = data.followers || 0;
+
+            el.textContent = `${repos} repos · ${followers} followers`;
+        } catch {
+            el.textContent = '30+ repos · GitHub';
+        }
+    }
+
+    fetchGitHubStats();
+
     // ---- Mobile Menu Toggle ----
     const hamburger = document.getElementById('hamburger');
     const mobileMenu = document.getElementById('mobile-menu');
