@@ -3,203 +3,213 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ashutosh Bansal Portfolio</title>
+    <title>Ashutosh Bansal — Software Engineer</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="cursor"></div>
-    <div class="cursor-follower"></div>
-
+    <!-- Navigation -->
     <header>
-        <div class="logo">Ashutosh's Portfolio</div>
-        <nav>
-            <ul>
-                <li><a href="#home" class="nav-link active">Home</a></li>
-                <li><a href="#skills" class="nav-link">Skills</a></li>
-                <li><a href="#projects" class="nav-link">Projects</a></li>
-                <li><a href="#services" class="nav-link">Services</a></li>
-                <li><a href="#socials" class="nav-link">Socials</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
-            </ul>
+        <nav class="nav-container">
+            <a href="#" class="nav-logo">~/ ashutosh_bansal</a>
+            <div class="nav-links">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#experience" class="nav-link">Experience</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <div class="nav-actions">
+                <a href="AshutoshBansal.pdf?v=2" class="nav-resume" download="AshutoshBansal-Resume.pdf">Resume</a>
+                <a href="#contact" class="nav-contact-btn">Contact</a>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </nav>
-        <div class="hamburger">
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
-        </div>
-
     </header>
 
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobile-menu">
+        <a href="#home" class="mobile-link">Home</a>
+        <a href="#skills" class="mobile-link">Skills</a>
+        <a href="#projects" class="mobile-link">Projects</a>
+        <a href="#experience" class="mobile-link">Experience</a>
+        <a href="#contact" class="mobile-link">Contact</a>
+        <a href="AshutoshBansal.pdf?v=2" class="mobile-link" download="AshutoshBansal-Resume.pdf">Resume</a>
+    </div>
+
     <main>
-        <!-- Home Section -->
-        <section id="home" class="section">
+        <!-- Hero / Bento Section -->
+        <section id="home" class="hero-section">
             <div class="container">
-                <div class="home-content">
-                    <div class="home-text">
-                        <h1 class="glitch" data-text="Software Engineer">Software Engineer</h1>
-                        <p class="typing-text">I build exceptional digital experiences.</p>
-                        <div class="home-description">
-                            <p>Passionate software engineer with expertise in creating robust and scalable applications. I love solving complex problems and turning ideas into reality through code.</p>
-                            <div class="cta-buttons">
-                                <a href="AshutoshBansal.pdf?v=2" class="btn secondary-btn" download="AshutoshBansal-Resume.pdf">Resume <i class="fa-solid fa-download"></i></a>
-                                <a href="#projects" class="btn primary-btn">View Work</a>
-                            </div>
+                <div class="hero-intro">
+                    <div class="status-badge">
+                        <span class="status-dot"></span>
+                        Available for work
+                    </div>
+                    <h1 class="hero-roles">
+                        <span>Software Engineer</span>
+                        <span class="separator">·</span>
+                        <span>Full-Stack Developer</span>
+                        <span class="separator">·</span>
+                        <span>Problem Solver</span>
+                    </h1>
+                </div>
+
+                <div class="bento-grid">
+                    <!-- Profile Card -->
+                    <div class="bento-card bento-profile" data-animate>
+                        <img src="./resources/Ashutosh.png" alt="Ashutosh Bansal" class="profile-img">
+                        <div class="profile-info">
+                            <h2>Ashutosh Bansal</h2>
+                            <p class="profile-role">Full-Stack Developer</p>
                         </div>
                     </div>
-                    <div class="home-image">
-                        <div class="image-container">
-                            <img src="./resources/Ashutosh.png" alt="Software Engineer Portrait">
-                            <div class="floating-shapes">
-                                <div class="shape shape-1"></div>
-                                <div class="shape shape-2"></div>
-                                <div class="shape shape-3"></div>
-                                <div class="shape shape-4"></div>
-                            </div>
+
+                    <!-- About Card -->
+                    <div class="bento-card bento-about" data-animate>
+                        <p>I build interactive web apps using 
+                            <span class="tech-highlight"><i class="fab fa-js"></i> JavaScript</span>, 
+                            <span class="tech-highlight"><i class="fab fa-react"></i> React</span>, 
+                            <span class="tech-highlight"><i class="fab fa-node-js"></i> Node.js</span>, and 
+                            <span class="tech-highlight"><i class="fas fa-database"></i> MongoDB</span>. 
+                            With a focus on clean UI design. Passionate about creating seamless user experiences, driven by a keen eye for detail.
+                        </p>
+                    </div>
+
+                    <!-- Location Card -->
+                    <div class="bento-card bento-location" data-animate>
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <p class="bento-label">Location</p>
+                            <p class="bento-value">Uttar Pradesh, India</p>
                         </div>
                     </div>
-                </div>
-            </div>
-            <div class="scroll-indicator">
-                <div class="mouse">
-                    <div class="wheel"></div>
-                </div>
-                <div class="arrow">
-                    <span></span>
+
+                    <!-- Email Card -->
+                    <div class="bento-card bento-email" data-animate>
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <p class="bento-label">Email</p>
+                            <a href="mailto:ashutoshb.dev@gmail.com" class="bento-value">ashutoshb.dev@gmail.com</a>
+                        </div>
+                    </div>
+
+                    <!-- GitHub Card -->
+                    <a href="https://github.com/Ashutosh-techbit" target="_blank" class="bento-card bento-social bento-github" data-animate>
+                        <i class="fab fa-github"></i>
+                        <div>
+                            <p class="bento-label">GitHub</p>
+                            <p class="bento-value">300+ contributions · 30+ repos</p>
+                        </div>
+                        <i class="fas fa-arrow-up-right-from-square bento-arrow"></i>
+                    </a>
+
+                    <!-- LinkedIn Card -->
+                    <a href="https://www.linkedin.com/in/ashutosh-bansal23/" target="_blank" class="bento-card bento-social bento-linkedin" data-animate>
+                        <i class="fab fa-linkedin"></i>
+                        <div>
+                            <p class="bento-label">LinkedIn</p>
+                            <p class="bento-value">2500+ connections</p>
+                        </div>
+                        <i class="fas fa-arrow-up-right-from-square bento-arrow"></i>
+                    </a>
+
+                    <!-- LeetCode Card -->
+                    <a href="https://leetcode.com/" target="_blank" class="bento-card bento-social bento-leetcode" data-animate>
+                        <i class="fas fa-code"></i>
+                        <div>
+                            <p class="bento-label">LeetCode</p>
+                            <p class="bento-value">210+ problems · 1452 rating</p>
+                        </div>
+                        <i class="fas fa-arrow-up-right-from-square bento-arrow"></i>
+                    </a>
+
+                    <!-- Resume CTA Card -->
+                    <a href="AshutoshBansal.pdf?v=2" download="AshutoshBansal-Resume.pdf" class="bento-card bento-cta" data-animate>
+                        <i class="fas fa-file-arrow-down"></i>
+                        <span>Download Resume</span>
+                        <i class="fas fa-arrow-down bento-arrow-down"></i>
+                    </a>
                 </div>
             </div>
         </section>
 
-        <!-- Skills Section -->
+        <!-- Tech Stack Section -->
         <section id="skills" class="section">
             <div class="container">
-                <h2 class="section-title">My Skills</h2>
-                <div class="skills-container">
-                    <div class="skill-category">
-                        <h3>Frontend</h3>
-                        <div class="skills-grid">
-                            <div class="skill-item" data-skill="HTML5">
-                                <div class="skill-icon"><i class="fab fa-html5"></i></div>
-                                <div class="skill-info">
-                                    <h4>HTML5</h4>
-                                    <div class="progress-bar">
-                                        <div class="progress" style="width: 95%"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="skill-item" data-skill="CSS3">
-                                <div class="skill-icon"><i class="fab fa-css3-alt"></i></div>
-                                <div class="skill-info">
-                                    <h4>CSS3</h4>
-                                    <div class="progress-bar">
-                                        <div class="progress" style="width: 90%"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="skill-item" data-skill="JavaScript">
-                                <div class="skill-icon"><i class="fab fa-js"></i></div>
-                                <div class="skill-info">
-                                    <h4>JavaScript</h4>
-                                    <div class="progress-bar">
-                                        <div class="progress" style="width: 85%"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="skill-item" data-skill="React">
-                                <div class="skill-icon"><i class="fab fa-react"></i></div>
-                                <div class="skill-info">
-                                    <h4>React</h4>
-                                    <div class="progress-bar">
-                                        <div class="progress" style="width: 80%"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                <div class="section-header">
+                    <span class="section-label">TECH STACK</span>
+                    <h2 class="section-title">Technologies I Work With</h2>
+                </div>
+                <div class="tech-grid">
+                    <div class="tech-item" data-animate>
+                        <div class="tech-icon"><i class="fab fa-html5"></i></div>
+                        <span>HTML5</span>
                     </div>
-                    
-                    <div class="skill-category">
-                        <h3>Backend</h3>
-                        <div class="skills-grid">
-                            <div class="skill-item" data-skill="Node.js">
-                                <div class="skill-icon"><i class="fab fa-node-js"></i></div>
-                                <div class="skill-info">
-                                    <h4>Node.js</h4>
-                                    <div class="progress-bar">
-                                        <div class="progress" style="width: 85%"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="skill-item" data-skill="Python">
-                                <div class="skill-icon"><i class="fab fa-python"></i></div>
-                                <div class="skill-info">
-                                    <h4>Express</h4>
-                                    <div class="progress-bar">
-                                        <div class="progress" style="width: 80%"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="skill-item" data-skill="MongoDB">
-                                <div class="skill-icon"><i class="fas fa-database"></i></div>
-                                <div class="skill-info">
-                                    <h4>Java</h4>
-                                    <div class="progress-bar">
-                                        <div class="progress" style="width: 75%"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="skill-item" data-skill="SQL">
-                                <div class="skill-icon"><i class="fas fa-table"></i></div>
-                                <div class="skill-info">
-                                    <h4>SQL</h4>
-                                    <div class="progress-bar">
-                                        <div class="progress" style="width: 70%"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="tech-item" data-animate>
+                        <div class="tech-icon"><i class="fab fa-css3-alt"></i></div>
+                        <span>CSS3</span>
                     </div>
-                    
-                    <div class="skill-category">
-                        <h3>Tools & Others</h3>
-                        <div class="skills-grid">
-                            <div class="skill-item" data-skill="Git">
-                                <div class="skill-icon"><i class="fab fa-git-alt"></i></div>
-                                <div class="skill-info">
-                                    <h4>Git</h4>
-                                    <div class="progress-bar">
-                                        <div class="progress" style="width: 99%"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="skill-item" data-skill="Docker">
-                                <div class="skill-icon"><i class="fa-solid fa-laptop-code"></i></div>
-                                <div class="skill-info">
-                                    <h4>Data Structures</h4>
-                                    <div class="progress-bar">
-                                        <div class="progress" style="width: 100%"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="skill-item" data-skill="AWS">
-                                <div class="skill-icon"><i class="fa-solid fa-code"></i></div>
-                                <div class="skill-info">
-                                    <h4>Algorithms</h4>
-                                    <div class="progress-bar">
-                                        <div class="progress" style="width: 89%"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="skill-item" data-skill="Figma">
-                                <div class="skill-icon"><i class="fab fa-figma"></i></div>
-                                <div class="skill-info">
-                                    <h4>Figma</h4>
-                                    <div class="progress-bar">
-                                        <div class="progress" style="width: 70%"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="tech-item" data-animate>
+                        <div class="tech-icon"><i class="fab fa-js"></i></div>
+                        <span>JavaScript</span>
+                    </div>
+                    <div class="tech-item" data-animate>
+                        <div class="tech-icon"><i class="fab fa-react"></i></div>
+                        <span>React</span>
+                    </div>
+                    <div class="tech-item" data-animate>
+                        <div class="tech-icon"><i class="fab fa-node-js"></i></div>
+                        <span>Node.js</span>
+                    </div>
+                    <div class="tech-item" data-animate>
+                        <div class="tech-icon"><i class="fas fa-server"></i></div>
+                        <span>Express.js</span>
+                    </div>
+                    <div class="tech-item" data-animate>
+                        <div class="tech-icon"><i class="fab fa-java"></i></div>
+                        <span>Java</span>
+                    </div>
+                    <div class="tech-item" data-animate>
+                        <div class="tech-icon"><i class="fas fa-database"></i></div>
+                        <span>MongoDB</span>
+                    </div>
+                    <div class="tech-item" data-animate>
+                        <div class="tech-icon"><i class="fas fa-table"></i></div>
+                        <span>SQL</span>
+                    </div>
+                    <div class="tech-item" data-animate>
+                        <div class="tech-icon"><i class="fab fa-git-alt"></i></div>
+                        <span>Git</span>
+                    </div>
+                    <div class="tech-item" data-animate>
+                        <div class="tech-icon"><i class="fab fa-github"></i></div>
+                        <span>GitHub</span>
+                    </div>
+                    <div class="tech-item" data-animate>
+                        <div class="tech-icon"><i class="fab fa-figma"></i></div>
+                        <span>Figma</span>
+                    </div>
+                    <div class="tech-item" data-animate>
+                        <div class="tech-icon"><i class="fas fa-wind"></i></div>
+                        <span>Tailwind CSS</span>
+                    </div>
+                    <div class="tech-item" data-animate>
+                        <div class="tech-icon"><i class="fab fa-bootstrap"></i></div>
+                        <span>Bootstrap</span>
+                    </div>
+                    <div class="tech-item" data-animate>
+                        <div class="tech-icon"><i class="fas fa-laptop-code"></i></div>
+                        <span>DSA</span>
+                    </div>
+                    <div class="tech-item" data-animate>
+                        <div class="tech-icon"><i class="fas fa-code"></i></div>
+                        <span>Algorithms</span>
                     </div>
                 </div>
             </div>
@@ -208,15 +218,19 @@
         <!-- Projects Section -->
         <section id="projects" class="section">
             <div class="container">
-                <h2 class="section-title">My Projects</h2>
+                <div class="section-header">
+                    <span class="section-label">FEATURED PROJECTS</span>
+                    <h2 class="section-title">Things I've Built</h2>
+                </div>
                 <div class="projects-grid">
-                    <div class="project-card">
-                        <div class="project-image">
-                            <img src="./resources/project-1.png" alt="Project 1">
+                    <!-- Project 1 -->
+                    <div class="project-card" data-animate>
+                        <div class="project-preview">
+                            <img src="./resources/project-1.png" alt="Wanderlust">
                         </div>
                         <div class="project-content">
-                            <h3> Wanderlust – Hotel Booking Platform</h3>
-                            <p>A full-fledged Airbnb-inspired booking site with user authentication, listing management, reviews, and REST API integration.
+                            <h3>Wanderlust – Hotel Booking Platform</h3>
+                            <p>A full-fledged Airbnb-inspired booking site with user authentication, listing management, reviews, and REST API integration.</p>
                             <div class="project-tech">
                                 <span>Express</span>
                                 <span>Node.js</span>
@@ -224,47 +238,61 @@
                                 <span>Bootstrap</span>
                             </div>
                             <div class="project-links">
-                                <a href="https://wanderlust-ugot.onrender.com/" class="project-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-                                <a href="https://github.com/Ashutosh-techbit/WanderLust" class="project-link"><i class="fab fa-github"></i> Source Code</a>
+                                <a href="https://github.com/Ashutosh-techbit/WanderLust" target="_blank" class="project-link">
+                                    <i class="fab fa-github"></i> View on GitHub
+                                </a>
+                                <a href="https://wanderlust-ugot.onrender.com/" target="_blank" class="project-link primary">
+                                    <i class="fas fa-external-link-alt"></i> Visit Website
+                                </a>
                             </div>
                         </div>
                     </div>
-                    
-                    <div class="project-card">
-                        <div class="project-image">
-                            <img src="./resources/project-2.png" alt="Project 2">
+
+                    <!-- Project 2 -->
+                    <div class="project-card" data-animate>
+                        <div class="project-preview">
+                            <img src="./resources/project-2.png" alt="Blog Web App">
                         </div>
                         <div class="project-content">
                             <h3>Blog Web App</h3>
-                            <p>A responsive web app with mordern style and animations.</p>
+                            <p>A responsive web app with modern style and animations, featuring a clean blogging interface.</p>
                             <div class="project-tech">
                                 <span>Bootstrap</span>
                                 <span>CSS</span>
                                 <span>Figma</span>
-                                <span>Html</span>
+                                <span>HTML</span>
                             </div>
                             <div class="project-links">
-                                <a href="https://postnow-kappa.vercel.app/" class="project-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-                                <a href="https://github.com/Ashutosh-techbit/Blog-WebApp" class="project-link"><i class="fab fa-github"></i> Source Code</a>
+                                <a href="https://github.com/Ashutosh-techbit/Blog-WebApp" target="_blank" class="project-link">
+                                    <i class="fab fa-github"></i> View on GitHub
+                                </a>
+                                <a href="https://postnow-kappa.vercel.app/" target="_blank" class="project-link primary">
+                                    <i class="fas fa-external-link-alt"></i> Visit Website
+                                </a>
                             </div>
                         </div>
                     </div>
-                    
-                    <div class="project-card">
-                        <div class="project-image">
-                            <img src="./resources/project-3.png" alt="Project 3">
+
+                    <!-- Project 3 -->
+                    <div class="project-card" data-animate>
+                        <div class="project-preview">
+                            <img src="./resources/project-3.png" alt="Movie Slider">
                         </div>
                         <div class="project-content">
                             <h3>Movie Slider – Trending Movie Showcase</h3>
-                            <p>A weather application that provides real-time weather data and forecasts for locations worldwide.</p>
+                            <p>An interactive movie showcase application featuring smooth slider animations and trending movie data display.</p>
                             <div class="project-tech">
                                 <span>Swiper.js</span>
-                                <span>Tailwind css</span>
-                                <span>Html</span>
+                                <span>Tailwind CSS</span>
+                                <span>HTML</span>
                             </div>
                             <div class="project-links">
-                                <a href="https://movie-slider-psi.vercel.app/" class="project-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-                                <a href="https://github.com/Ashutosh-techbit/Movie-slider" class="project-link"><i class="fab fa-github"></i> Source Code</a>
+                                <a href="https://github.com/Ashutosh-techbit/Movie-slider" target="_blank" class="project-link">
+                                    <i class="fab fa-github"></i> View on GitHub
+                                </a>
+                                <a href="https://movie-slider-psi.vercel.app/" target="_blank" class="project-link primary">
+                                    <i class="fas fa-external-link-alt"></i> Visit Website
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -273,111 +301,40 @@
         </section>
 
         <!-- Services Section -->
-        <section id="services" class="section">
+        <section id="experience" class="section">
             <div class="container">
-                <h2 class="section-title">My Services</h2>
+                <div class="section-header">
+                    <span class="section-label">WHAT I DO</span>
+                    <h2 class="section-title">Services & Expertise</h2>
+                </div>
                 <div class="services-grid">
-                    <div class="service-card">
-                        <div class="service-icon">
+                    <div class="service-card" data-animate>
+                        <div class="service-icon-wrap">
                             <i class="fas fa-code"></i>
                         </div>
-                        <h3>👨‍💻 Software Development</h3>
-                        <p>I build scalable and efficient software solutions tailored to user needs. From concept to deployment, I ensure clean code, modular architecture, and performance optimization.</p>
-                        <a href="#contact" class="service-link">Get Started <i class="fas fa-arrow-right"></i></a>
+                        <h3>Software Development</h3>
+                        <p>I build scalable and efficient software solutions tailored to user needs. From concept to deployment, ensuring clean code, modular architecture, and performance optimization.</p>
                     </div>
-                    
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <i class="fas fa-mobile-alt"></i>
+                    <div class="service-card" data-animate>
+                        <div class="service-icon-wrap">
+                            <i class="fas fa-layer-group"></i>
                         </div>
-                        <h3>🌐 Full Stack Development</h3>
-                        <p>End-to-end web development using the MERN stack (MongoDB, Express.js, React.js, Node.js) with a focus on security, responsiveness, and functionality.
-Deliverables: Authentication systems, REST APIs, Admin Panels, Dashboards.</p>
-                        <a href="#contact" class="service-link">Get Started <i class="fas fa-arrow-right"></i></a>
+                        <h3>Full Stack Development</h3>
+                        <p>End-to-end web development using the MERN stack with a focus on security, responsiveness, and functionality. Authentication systems, REST APIs, Admin Panels.</p>
                     </div>
-                    
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <i class="fas fa-server"></i>
+                    <div class="service-card" data-animate>
+                        <div class="service-icon-wrap">
+                            <i class="fas fa-palette"></i>
                         </div>
-                        <h3>🎨 UI/UX Design</h3>
-                        <p>I design intuitive, visually appealing user interfaces with a focus on user experience and usability.
-Tools: Figma, Canva, Tailwind CSS, Bootstrap.</p>
-                        <a href="#contact" class="service-link">Get Started <i class="fas fa-arrow-right"></i></a>
+                        <h3>UI/UX Design</h3>
+                        <p>I design intuitive, visually appealing user interfaces with a focus on user experience and usability. Tools: Figma, Canva, Tailwind CSS, Bootstrap.</p>
                     </div>
-                    
-                    <div class="service-card">
-                        <div class="service-icon">
+                    <div class="service-card" data-animate>
+                        <div class="service-icon-wrap">
                             <i class="fas fa-database"></i>
                         </div>
                         <h3>Database Design</h3>
-                        <p>Creating efficient and scalable database architectures tailored to your specific needs.</p>
-                        <a href="#contact" class="service-link">Get Started <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Socials Section -->
-        <section id="socials" class="section">
-            <div class="container">
-                <h2 class="section-title">Connect With Me</h2>
-                <div class="socials-grid">
-                    <div class="social-card github">
-                        <div class="social-icon">
-                            <i class="fab fa-github"></i>
-                        </div>
-                        <h3>GitHub</h3>
-                        <p>Check out my code repositories and contributions</p>
-                        <div class="badges">
-                            <div class="badge">
-                                <i class="fas fa-star"></i>
-                                <span>300+ contributions</span>
-                            </div>
-                            <div class="badge">
-                                <i class="fas fa-code-branch"></i>
-                                <span>30+ Repos</span>
-                            </div>
-                        </div>
-                        <a href="https://github.com/Ashutosh-techbit" target="_blank" class="social-link">Visit Profile</a>
-                    </div>
-                    
-                    <div class="social-card linkedin">
-                        <div class="social-icon">
-                            <i class="fab fa-linkedin"></i>
-                        </div>
-                        <h3>LinkedIn</h3>
-                        <p>Connect with me professionally and explore my career journey</p>
-                        <div class="badges">
-                            <div class="badge">
-                                <i class="fas fa-user-friends"></i>
-                                <span>2500+ Connections</span>
-                            </div>
-                            <div class="badge">
-                                <i class="fas fa-briefcase"></i>
-                                <span>700+ Reach</span>
-                            </div>
-                        </div>
-                        <a href="https://www.linkedin.com/in/ashutosh-bansal23/" target="_blank" class="social-link">Visit Profile</a>
-                    </div>
-                    
-                    <div class="social-card leetcode">
-                        <div class="social-icon">
-                            <i class="fas fa-code"></i>
-                        </div>
-                        <h3>LeetCode</h3>
-                        <p>Explore my problem-solving skills and coding challenges</p>
-                        <div class="badges">
-                            <div class="badge">
-                                <i class="fas fa-trophy"></i>
-                                <span>210+ Problems</span>
-                            </div>
-                            <div class="badge">
-                                <i class="fas fa-award"></i>
-                                <span>Rating : 1452</span>
-                            </div>
-                        </div>
-                        <a href="https://leetcode.com/" target="_blank" class="social-link">Visit Profile</a>
+                        <p>Creating efficient and scalable database architectures tailored to your specific needs. MongoDB, MySQL, and more.</p>
                     </div>
                 </div>
             </div>
@@ -386,103 +343,80 @@ Tools: Figma, Canva, Tailwind CSS, Bootstrap.</p>
         <!-- Contact Section -->
         <section id="contact" class="section">
             <div class="container">
-                <h2 class="section-title">Get In Touch</h2>
-                <div class="contact-container">
-                    <div class="contact-info">
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <i class="fas fa-envelope"></i>
-                            </div>
-                            <div class="contact-text">
-                                <h3>Email</h3>
-                                <p>ashutoshb.dev@gmail.com</p>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <i class="fas fa-phone"></i>
-                            </div>
-                            <div class="contact-text">
-                                <h3>Phone</h3>
-                                <p>+91 8279610810</p>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <i class="fas fa-map-marker-alt"></i>
-                            </div>
-                            <div class="contact-text">
-                                <h3>Location</h3>
-                                <p>Uttar Pradesh , India</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="contact-form-container">
-                        <form action="https://api.web3forms.com/submit" method="POST" id="contact-form" class="contact-form">
-                            
-                            <!-- <input type="hidden" name="redirect" value="https://ashutosh-techbit.github.io/portfolio/"> -->
-                            
-                            
-                            <div class="form-group">
-                                <input type="text" id="name" name="name" placeholder="Your Name" required>
-                                <label for="name">Your Name</label>
-                            </div>
-                            <div class="form-group">
-                                <input type="email" id="email" name="email" placeholder="Your Email" required>
-                                <label for="email">Your Email</label>
-                            </div>
-                            <div class="form-group">
-                                <input type="text" id="subject" name="subject" placeholder="Subject" required>
-                                <label for="subject">Subject</label>
-                            </div>
-                            <div class="form-group">
-                                <textarea id="message" name="message" placeholder="Your Message" required></textarea>
-                                <label for="message">Your Message</label>
-                            </div>
-                            <button type="submit" class="submit-btn">
-                                <span>Send Message</span>
-                                <i class="fas fa-paper-plane"></i>
-                            </button>
-                            <input type="hidden" name="access_key" value="d91a0e99-0cbb-4f3c-a161-9f78039741d7">
-                        </form>
-                        <div id="form-status" class="form-status"></div>
-                    </div>
+                <div class="section-header">
+                    <span class="section-label">LET'S WORK TOGETHER</span>
+                    <h2 class="section-title">Get in Touch</h2>
+                    <p class="section-subtitle">Choose your preferred method to connect and let's discuss your project.</p>
                 </div>
+
+                <div class="contact-cards">
+                    <a href="mailto:ashutoshb.dev@gmail.com" class="contact-method-card" data-animate>
+                        <i class="fas fa-envelope"></i>
+                        <h3>ashutoshb.dev@gmail.com</h3>
+                        <p>Quick inquiries & questions</p>
+                    </a>
+                    <a href="https://github.com/Ashutosh-techbit" target="_blank" class="contact-method-card" data-animate>
+                        <i class="fab fa-github"></i>
+                        <h3>GitHub</h3>
+                        <p>Check out my repositories</p>
+                    </a>
+                    <a href="https://www.linkedin.com/in/ashutosh-bansal23/" target="_blank" class="contact-method-card" data-animate>
+                        <i class="fab fa-linkedin"></i>
+                        <h3>LinkedIn</h3>
+                        <p>Connect professionally</p>
+                    </a>
+                </div>
+
+                <div class="contact-form-wrapper" data-animate>
+                    <div class="form-header">
+                        <h3>Send a Message</h3>
+                        <p>Prefer to write? Fill out the form and I'll get back to you within 24 hours.</p>
+                    </div>
+                    <form action="https://api.web3forms.com/submit" method="POST" id="contact-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" name="name" placeholder="Your name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" placeholder="you@example.com" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" placeholder="What's this about?" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" placeholder="Tell me about your project..." rows="5" required></textarea>
+                        </div>
+                        <input type="hidden" name="access_key" value="d91a0e99-0cbb-4f3c-a161-9f78039741d7">
+                        <button type="submit" class="submit-btn">
+                            Send Message <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                    <div id="form-status" class="form-status"></div>
+                </div>
+
+                <p class="response-note">Response within 24 hours &bull; Available for hire</p>
             </div>
         </section>
     </main>
 
+    <!-- Footer -->
     <footer>
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">
-                    <h3>Ashutosh Bansal</h3>
-                    <p>Let’s build something impactful together — I'm just a message away..</p>
-                </div>
-                <div class="footer-links">
-                    <div class="footer-link-group">
-                        <h4>Navigation</h4>
-                        <ul>
-                            <li><a href="#home">Home</a></li>
-                            <li><a href="#skills">Skills</a></li>
-                            <li><a href="#projects">Projects</a></li>
-                            <li><a href="#services">Services</a></li>
-                            <li><a href="#socials">Socials</a></li>
-                            <li><a href="#contact">Contact</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-link-group">
-                        <h4>Social Media</h4>
-                        <ul>
-                            <li><a href="https://github.com/Ashutosh-techbit"><i class="fab fa-github"></i> GitHub</a></li>
-                            <li><a href="https://www.linkedin.com/in/ashutosh-bansal23/"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
-                            <li><a href="https://leetcode.com/"><i class="fab fa-twitter"></i> Leetcode</a></li>
-                        </ul>
-                    </div>
-                </div>
+            <div class="footer-top">
+                <p class="footer-quote">"The best time to plant a tree was 20 years ago. The second best time is now."</p>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 Ashutosh Bansal Portfolio. All rights reserved.</p>
+                <p>&copy; 2025 Ashutosh Bansal.</p>
+                <div class="footer-socials">
+                    <a href="https://github.com/Ashutosh-techbit" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/ashutosh-bansal23/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="mailto:ashutoshb.dev@gmail.com"><i class="fas fa-envelope"></i></a>
+                </div>
             </div>
         </div>
     </footer>
