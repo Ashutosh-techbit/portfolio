@@ -1,7 +1,8 @@
 {
-  "name": "my-v0-project",
+  "name": "ashutosh-bansal-portfolio",
   "version": "0.1.0",
   "private": true,
+  "description": "Ashutosh Bansal's responsive personal portfolio website showcasing frontend projects, skills, services/experience, contact details, animations, and GitHub integration.",
   "scripts": {
     "build": "echo 'no build script'"
   }
